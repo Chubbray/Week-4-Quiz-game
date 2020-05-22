@@ -1,0 +1,40 @@
+body {
+    margin: 200px;
+    border: 2px;
+    border-style: solid;
+    padding: 2%;
+}
+
+header {
+    border: 2px;
+    border-style: solid;
+    padding: 15px 32px;
+}
+
+header h3 {
+    color: aqua;
+}
+
+.time {
+    text-align: right;
+}
+
+section {
+    border: 2px;
+    border-style: solid;
+    padding: 15px 32px;
+}
+
+.main h1 {
+    text-align: center;
+}
+
+.main p {
+    text-align: center;
+}
+
+.start-button {
+    padding: 15px 32px;
+    text-align: center;
+    
+}
