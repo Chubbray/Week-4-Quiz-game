@@ -1,15 +1,11 @@
 body {
-    margin: 200px;
+    margin: 100px 435px;
     border: 2px;
     border-style: solid;
-    padding: 2%;
+    padding: 30px 50px;
 }
 
-header {
-    border: 2px;
-    border-style: solid;
-    padding: 15px 32px;
-}
+
 
 header h3 {
     color: aqua;
@@ -20,8 +16,6 @@ header h3 {
 }
 
 section {
-    border: 2px;
-    border-style: solid;
     padding: 15px 32px;
 }
 
