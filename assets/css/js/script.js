@@ -9,13 +9,14 @@ var questions = [
 var secondsLeft = 30;
 var score = 0;
 var highScore = []
+const time = document.getElementById("time-count");
+var endGame = restartGame
 
 function setTime() {
 	var timerInterval = setInterval(function () {
 		secondsLeft--;
 		time.innerHTML = ` 
-		<div>Time Remaining: ${secondsLeft} seconds
-		
+		<div>Time: ${secondsLeft} 		
 		</div>
         `;
         console.log(setTime);
@@ -28,9 +29,8 @@ function setTime() {
 
 function startQuiz() {
     // atch to start button on click event
-     document.getElementById("time").innerHTML = `
-     <div>Time Remaining: ${secondsLeft} seconds
-     
+     document.getElementById("time-count").innerHTML = `
+     <div>Time: ${secondsLeft}      
      </div>
      `;
      console.log(startQuiz);
