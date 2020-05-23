@@ -13,11 +13,12 @@ var highScore = []
 function setTime() {
 	var timerInterval = setInterval(function () {
 		secondsLeft--;
-		time.innerHTML = `
+		time.innerHTML = ` 
 		<div>Time Remaining: ${secondsLeft} seconds
 		
 		</div>
-		`;
+        `;
+        console.log(setTime);
 		if (secondsLeft <= 0) {
 			clearInterval(timerInterval);
 			return endGame();
@@ -27,7 +28,12 @@ function setTime() {
 
 function startQuiz() {
     // atch to start button on click event
-     document.getElementById("start").style.color = "purple";
+     document.getElementById("time").innerHTML = `
+     <div>Time Remaining: ${secondsLeft} seconds
+     
+     </div>
+     `;
+     console.log(startQuiz);
     // call set time function
     // call render questions function
 }
