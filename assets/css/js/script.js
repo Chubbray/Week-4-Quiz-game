@@ -1,8 +1,16 @@
 var questions = [
     {
-        "question": "Commony used data types Do Not Include:",
-        "chose": ["strings", "booleans", "alerts", "numbers"],
-        "answer": "alerts"
+        "question1": "Commony used data types Do Not Include:",
+        "chose1": ["strings", "booleans", "alerts", "numbers"],
+        "answer1": "alerts"
+    }
+]
+
+var questions = [
+    {
+        "question2": "The condition in an if / else statement is enclosed with ___________.",
+        "chose2": ["quotes", "curly brackets", "parenthesis", "square brackets"],
+        "answer2": "curly brackets"
     }
 ]
 
@@ -10,6 +18,9 @@ var secondsLeft = 30;
 var score = 0;
 var highScore = []
 const time = document.getElementById("time-count");
+const main = document.getElementById("main-page");
+var text = "";
+var i;
 var endGame = restartGame
 
 function setTime() {
@@ -19,7 +30,6 @@ function setTime() {
 		<div>Time: ${secondsLeft} 		
 		</div>
         `;
-        console.log(setTime);
 		if (secondsLeft <= 0) {
 			clearInterval(timerInterval);
 			return endGame();
@@ -29,18 +39,24 @@ function setTime() {
 
 function startQuiz() {
     // atch to start button on click event
+    // call set time function
      document.getElementById("time-count").innerHTML = `
      <div>Time: ${secondsLeft}      
      </div>
      `;
-     console.log(startQuiz);
-    // call set time function
     // call render questions function
+    
 }
 
 function renderQuestion() {
     // use for loop for questin, answers form the aray to html
-
+    for (i = 0; i < questions.length; i++) {
+        text += questions[i] + " ";
+        
+    }
+    document.getElementById("main-page").innerHTML = `<div> ${questions}</div>`;
+    console.log(questions)
+    console.log(text)
 }
 
 function checkAnswer() {
