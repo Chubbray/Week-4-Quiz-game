@@ -1,16 +1,14 @@
-var questions = [
+var questionsObjects = [
     {
-        "question1": "Commony used data types Do Not Include:",
-        "chose1": ["strings", "booleans", "alerts", "numbers"],
-        "answer1": "alerts"
-    }
-]
+        "question": "Commony used data types Do Not Include:",
+        "chose": ["strings", "booleans", "alerts", "numbers"],
+        "answer": "alerts"
+    },
 
-var questions = [
     {
-        "question2": "The condition in an if / else statement is enclosed with ___________.",
-        "chose2": ["quotes", "curly brackets", "parenthesis", "square brackets"],
-        "answer2": "curly brackets"
+        "question": "The condition in an if / else statement is enclosed with ___________.",
+        "chose": ["quotes", "curly brackets", "parenthesis", "square brackets"],
+        "answer": "curly brackets"
     }
 ]
 
@@ -50,12 +48,34 @@ function startQuiz() {
 
 function renderQuestion() {
     // use for loop for questin, answers form the aray to html
-    for (i = 0; i < questions.length; i++) {
-        text += questions[i] + " ";
-        
-    }
-    document.getElementById("main-page").innerHTML = `<div> ${questions}</div>`;
-    console.log(questions)
+    
+    document.getElementById("main-page").innerHTML = `<div> ${questionsObjects[0].question}
+   
+    <ol>
+    <li>
+    <button onclick="answer()">${questionsObjects[0].chose[0]}</button>
+    </li>
+    <li>
+    <button onclick="answer()">${questionsObjects[0].chose[1]}</button>
+    </li>
+    <li>
+    <button onclick="answer()">${questionsObjects[0].chose[2]}</button>
+    </li>
+    <li>
+    <button onclick="answer()">${questionsObjects[0].chose[3]}</button>
+    </li>
+    </ol>
+    
+    </div>`;
+    console.log(questionsObjects)
+     for (i = 0; i < questionsObjects[0].chose; i++) {
+         console.log("questions",questionsObjects[i])
+         text += questionsObjects[i].question + " ";
+
+         if (questionsObjects[0].chose[2] == questionsObjects[0].chose[2]) {
+             
+         }
+     }
     
 }
 
