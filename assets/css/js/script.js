@@ -45,7 +45,7 @@ function startQuiz() {
      </div>
      `;
     // call render questions function
-    
+    renderQuestion();
 }
 
 function renderQuestion() {
@@ -56,7 +56,7 @@ function renderQuestion() {
     }
     document.getElementById("main-page").innerHTML = `<div> ${questions}</div>`;
     console.log(questions)
-    console.log(text)
+    
 }
 
 function checkAnswer() {
